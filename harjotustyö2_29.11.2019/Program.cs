@@ -9,6 +9,7 @@ namespace harjotustyö2_29._11._2019
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("test_29.11.2019");
             // lista ehdokkaista
             List<Ehdokas> ehdokkaat =
                 new List<Ehdokas>();
