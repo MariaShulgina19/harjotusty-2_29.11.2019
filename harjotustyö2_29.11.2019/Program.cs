@@ -21,8 +21,8 @@ namespace harjotustyö2_29._11._2019
 
             // Read the file and display it line by line.  
             StreamReader file =
-                // new StreamReader(@"c:\temp\ehdokkaat.txt");
-                new StreamReader(@"C:\Users\Käyttäjä\Desktop\SEAMK\Tietorakeneet2019\ehdokkaat.txt");
+                 new StreamReader(@"c:\temp\ehdokkaat.txt");
+               // new StreamReader(@"C:\Users\Käyttäjä\Desktop\SEAMK\Tietorakeneet2019\ehdokkaat.txt");
             while ((line = file.ReadLine()) != null)
             {
                 // Alpo	Kitinoja	KOK	223
@@ -51,19 +51,22 @@ namespace harjotustyö2_29._11._2019
             //ehdokkaat.Sort(VertailuAaniMaaranMukaan.AanienMukaan());
  
             // käydään lista läpi
-            foreach (var ehdokas in ehdokkaat)
+          /*  
+           *  
+           *  PRINTING
+           *  foreach (var ehdokas in ehdokkaat)
             {
-                Console.WriteLine(ehdokas);
+                Console.WriteLine(ehdokas.Sukunimi);
             }
             Console.ReadLine();
-
+            */
 
             //TREE
             
 
 
             //creating new tree
-            Ehdokas juuri1 = ehdokkaat[0];
+           Ehdokas juuri1 = ehdokkaat[0];
            TreeNode juuri = new TreeNode(juuri1);
 
             for (int i = 1; i < ehdokkaat.Count; i++) //starting from 2 juuri.count  [0]
@@ -76,16 +79,17 @@ namespace harjotustyö2_29._11._2019
             }
 
             Tree.traverse_inorder(juuri);
+            Console.WriteLine();
+            Console.WriteLine("TEST");
+            Console.WriteLine();
 
-
-
-            TreeNode h = Tree.Find(juuri, 'h');
+            TreeNode h = Tree.Find(juuri, ehdokkaat[3]);   //TreeNode h = Tree.Find(juuri, 'h'); what to use instead of 'h'
 
             Console.WriteLine(h.ToString());
 
-         
 
 
+            Console.ReadLine();
 
         }
     }
